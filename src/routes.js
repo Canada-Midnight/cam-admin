@@ -43,7 +43,7 @@ import Billing from "layouts/billing";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
-import SignUp from "layouts/authentication/sign-up";
+import MKTypography from "@mui/material/Typography";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -58,10 +58,78 @@ const routes = [
     component: <Dashboard />,
   },
   {
+    type: "divider",
+  },
+  {
+    type: "title",
+    key: "organization",
+    title: "Organizational tool",
+  },
+  {
+    type: "collapse",
+    name: "Finance",
+    key: "finance",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-piggy-bank" />
+      </MKTypography>
+    ),
+    route: "/org/finance",
+    component: <Billing />,
+  },
+  {
+    type: "collapse",
+    name: "Domains",
+    key: "domain",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-globe" />
+      </MKTypography>
+    ),
+    route: "/org/domains",
+    component: <Billing />,
+  },
+  {
+    type: "collapse",
+    name: "Polling",
+    key: "polling",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-check-to-slot" />
+      </MKTypography>
+    ),
+    route: "/org/polls",
+    component: <Billing />,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "title",
+    key: "membership",
+    title: "Membership",
+  },
+  {
+    type: "collapse",
+    name: "Members",
+    key: "members",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-image-portrait" />
+      </MKTypography>
+    ),
+    route: "/profile",
+    component: <Profile />,
+  },
+  {
     type: "collapse",
     name: "Standards",
     key: "stadards",
-    icon: <Icon fontSize="medium">quiz</Icon>,
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-chalkboard" />
+      </MKTypography>
+    ),
     route: "/standards",
     component: <Standards />,
   },
@@ -69,49 +137,110 @@ const routes = [
     type: "collapse",
     name: "Prestige",
     key: "prestige",
-    icon: <Icon fontSize="medium">flaky</Icon>,
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-user-graduate" />
+      </MKTypography>
+    ),
     route: "/prestige",
     component: <Prestige />,
   },
   {
     type: "collapse",
-    name: "Billing",
-    key: "billing",
-    icon: <Icon fontSize="medium">receipt_long</Icon>,
-    route: "/billing",
+    name: "Investigation",
+    key: "behavior",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-handshake-angle" />
+      </MKTypography>
+    ),
+    route: "/org/investigation",
     component: <Billing />,
   },
   {
+    type: "divider",
+  },
+  {
+    type: "title",
+    key: "Narration Tool",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-user-graduate" />
+      </MKTypography>
+    ),
+    route: "/narration",
+    title: "Narration Tool",
+  },
+  {
     type: "collapse",
-    name: "Notifications",
-    key: "notifications",
-    icon: <Icon fontSize="medium">notifications</Icon>,
-    route: "/notifications",
+    name: "Chronicles",
+    key: "chronicles",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-hand-lizard" />
+      </MKTypography>
+    ),
+    route: "/narration/chronicles",
     component: <Notifications />,
   },
   {
     type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="medium">person</Icon>,
-    route: "/profile",
-    component: <Profile />,
+    name: "Venues",
+    key: "venues",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-hand-spock" />
+      </MKTypography>
+    ),
+    route: "/narration/chronicles/venues",
+    component: <Notifications />,
   },
   {
     type: "collapse",
-    name: "Sign In",
-    key: "sign-in",
+    name: "Characters",
+    key: "characters",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-hand-scissors" />
+      </MKTypography>
+    ),
+    route: "/narration/chronicles/venues/characters",
+    component: <Notifications />,
+  },
+  {
+    type: "collapse",
+    name: "Approvals",
+    key: "approvals",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-hand-paper" />
+      </MKTypography>
+    ),
+    route: "/narration/chronicles/venues/characters/approvals",
+    component: <Notifications />,
+  },
+  {
+    type: "collapse",
+    name: "Investigation",
+    key: "investigation",
+    icon: (
+      <MKTypography>
+        <i className="fa-solid fa-hand-rock" />
+      </MKTypography>
+    ),
+    route: "/chronicles/investigation",
+    component: <Notifications />,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "collapse",
+    name: "Sign Out",
+    key: "sign-out",
     icon: <Icon fontSize="medium">login</Icon>,
     route: "/authentication/sign-in",
     component: <SignIn />,
-  },
-  {
-    type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="medium">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
   },
 ];
 
