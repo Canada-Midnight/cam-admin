@@ -29,7 +29,7 @@ export default function data() {
   function Members({ name, domain, camId }) {
     return (
       <MDBox display="flex" alignItems="left" lineHeight={1} width={5}>
-        <MDBox ml={1} lineHeight={1}>
+        <MDBox ml={-1} lineHeight={1}>
           <MDTypography display="block" variant="button" fontWeight="medium">
             {name}
           </MDTypography>

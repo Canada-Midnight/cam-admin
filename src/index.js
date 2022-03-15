@@ -20,7 +20,11 @@ import App from "App";
 
 // Material Dashboard 2 React Context Provider
 import { MaterialUIControllerProvider } from "context";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faCheckSquare, faCoffee, faSwatchbook } from "@fortawesome/free-solid-svg-icons";
 
+library.add(fab, faSwatchbook, faCoffee, faCheckSquare);
 ReactDOM.render(
   <BrowserRouter>
     <MaterialUIControllerProvider>
