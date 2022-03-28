@@ -38,6 +38,7 @@
     "chroma-js": "2.4.2",
     "core-js": "^3.21.1",
     "css-select": "^4.2.1",
+    "express": "^4.17.3",
     "joi": "^17.6.0",
     "lodash": "^4.17.21",
     "nth-check": "^2.0.1",
@@ -60,7 +61,7 @@
     "yup": "0.32.11"
   },
   "scripts": {
-    "start": "PORT=3000 react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
